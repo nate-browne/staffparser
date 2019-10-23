@@ -131,7 +131,7 @@ Gary asks for a file instead of an email).
 
 ### Contact
 If at any point you don't understand what you're seeing here, email me at
-natebrowne@outlook.com and I'll do my best to remember what this thing does and
+npcompletenate@protonmail.com and I'll do my best to remember what this thing does and
 how to use it (lol). If I'm still at UCSD when you're reading this, you probably
 have a better way of contacting me other than my email address (so use that instead
 please!)
