@@ -42,6 +42,10 @@ this program on Windows. Sorry dude ¯\\_(ツ)_/¯
 me up. I'm pretty sure all you need to do is have a working version of Python
 and set up the path correctly (or use python3 explicitly) but I'm not sure.*
 
+Be warned: Gmail now has a setting called "Less secure app access" that you will
+have to turn off to be able to send emails via the script. Technically, you could always
+just export to file, copy and paste, and send it that way, but I digress.
+
 ### The Files
 
 #### The .tsv File
