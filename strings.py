@@ -11,12 +11,15 @@ email_err_str = '\n\tERROR: email address "{}" not well formatted.'
 validate_domain = 'Domain "{}" not in the set of valid domains; send anyway?\
   (y/n): '
 
-lab_str = "Students from {} will see {} open lab hours per week on their tutor calendar\n"
-auto_str = "You will take tickets from the {} Autograder Queue during open lab hours: {}\n"
+lab_str = "Students from {} will see {} open lab hours per week on their tutor\
+ calendar\n"
+auto_str = "You will take tickets from the {} Autograder Queue during open lab\
+ hours: {}\n"
 piazza = "You want to be a member of the {} Piazza staff: {}\n"
 mail = "You want to get emails sent to the staff maillist for {}: {}\n"
 accounts = "You want a TA account on ieng6 for {}: {}\n"
 grading = "You want to grade {} programming assignments: {}\n"
 grading12 = "You plan to attend quiz and exam grading events for CSE 12: {}\n"
 grading15 = "You plan to attend exam grading events for CSE 15L: {}\n"
-grading110 = "You plan to attend quiz, exam, and project grading events for CSE 110: {}\n"
+grading110 = "You plan to attend quiz, exam, and project grading events for \
+CSE 110: {}\n"

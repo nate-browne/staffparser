@@ -21,8 +21,6 @@ Make sure you have `python3` installed. To check if you have it, on Linux/macOS
 just type `which python3` into your terminal and it should give you a path to
 the executable if it exists (or it will say "python3 not found". If you don't
 have python3, figure out how to install it for your system.).
-Open up `main.py` and make sure that the shebang at the top of the file matches
-the path to your system's installation of `python3`.
 
 Next up, the email stuff. This program will send an email as you to Gary (or
 some other recipient that you can specify) so you'll need to get that squared
@@ -67,8 +65,8 @@ the email to the currently built email. These sections are the parts that
 mention how many hours you have, which Piazzas you're going to be in, what
 you're grading, etc.
 
-The thing to note here is that you may have to add/remove sections based on
-__the courses that Gary is teaching this quarter__. If he's doing 12, 15L, and
+The thing to note here is that you may have to comment/uncomment sections and imports
+based on __the courses that Gary is teaching this quarter__. If he's doing 12, 15L, and
 110, then the only thing you'd have to do is verify that the spreadsheet (and
 consequently, your `.tsv` file) have blank spaces where there is no entry
 (instead of like a 'N' or a 0 or something). The script is written assuming that
@@ -131,7 +129,7 @@ Gary asks for a file instead of an email).
 
 ### Contact
 If at any point you don't understand what you're seeing here, email me at
-npcompletenate@protonmail.com and I'll do my best to remember what this thing does and
+npcompletenate [at sign] protonmail [dot] com and I'll do my best to remember what this thing does and
 how to use it (lol). If I'm still at UCSD when you're reading this, you probably
 have a better way of contacting me other than my email address (so use that instead
 please!)
