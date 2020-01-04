@@ -14,6 +14,8 @@ domains = {
 }
 
 # Handy regular expression used for email matching
+# shoutout to CSE 105 for being able to create this
+# monstrosity
 r_str = r'(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)'
 regex = re.compile(r_str)
 
