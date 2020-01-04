@@ -79,7 +79,11 @@ def main(debug: bool = False) -> None:
     # Turn the array into a giant string for emailing
     result = ''.join(mails)
     print(f"Parsed TSV file. Number of tutors: {len(mails)}.")
-    print("Verify that this number is what you expect to see.")
+    print("Use the spreadsheet to verify that this number is what you expect.")
+    res = input("Is the number correct? (y/n): ")
+    if res.upper() != 'Y':
+        print('\nOperation aborted.')
+        exit(1)
 
     # Send the email
     try:
