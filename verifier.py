@@ -44,7 +44,7 @@ def verify_email(email: str) -> None:
 
     # If the domain given isn't in the set, make sure the user really does want
     # to send the email to that domain
-    if check[1] != '' and check[1] not in domains:
+    if len(check) > 1 and check[1] != '' and check[1] not in domains:
         double_check = input(validate_domain.format(check[1]))
 
         if double_check.upper() != 'Y':
