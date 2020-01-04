@@ -58,19 +58,19 @@ def main(debug: bool = False) -> None:
         for ind in range(2):
             next(reader)
 
-    # Populate the mails array with one email string per tutor
-    mails = []
-    printed = False
-    for row in reader:
-        data = dict()
-        extract_data(row, data)
+        # Populate the mails array with one email string per tutor
+        mails = []
+        printed = False
+        for row in reader:
+            data = dict()
+            extract_data(row, data)
 
-        # Print the first entry
-        if debug and not printed:
-            pp.pprint(data)
-            printed = True
+            # Print the first entry
+            if debug and not printed:
+                pp.pprint(data)
+                printed = True
 
-        mails.append(create_course_string(data, quarter))
+            mails.append(create_course_string(data, quarter))
 
     if debug:
         # Check the first one to make sure all is good
