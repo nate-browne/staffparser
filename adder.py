@@ -22,10 +22,12 @@ def add_attendance(dct: ParsedRowDict, out: MessageString) -> None:
         None. Out is updated as an output parameter to the function.
     '''
     if dct['attending'] != '':
-        tmp = dct['attending']
-        course = tmp.split('-')[0]
-        tp = tmp.split('-')[1]
-        out.append(f"You are attending lecture for {course} for {tp}\n")
+        course = dct['attending'].split(' ')
+        out.append(f"You are attending lecture for {course[0]}.\n")
+        if len(course) > 1:
+            for ind, val in enumerate(course):
+                if ind != 0:
+                    out.append(f'You are also attending lecture for {val}.\n')
 
 
 def add_hours_portion(dct: ParsedRowDict, out: MessageString) -> None:

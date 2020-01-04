@@ -19,7 +19,11 @@ def extract_data(row: CSVRow, data: ParsedRowDict) -> None:
         None. Data is updated as an output parameter.
     '''
     data['name'] = row[3]
-    data['role'] = row[9]
+    rl = row[9].split(" ")
+    if len(rl) == 1:
+        data['role'] = row[9]
+    else:
+        data['role'] = rl[0]
     data['attending'] = row[12]
     data['total_hours'] = row[13]
     data['12_hours'] = row[14]
