@@ -23,7 +23,7 @@ def create_course_string(dct: ParsedRowDict, quarter: str) -> str:
     name = dct['name'].split(',')[1] + ' ' + dct['name'].split(',')[0]
 
     out.append(bp.format(nm=name, qrtr=quarter))
-    prm_rl = f'Your primary role for {quarter} is: {dct["role"]}.\n'
+    prm_rl = f'Your role(s) for {quarter} is/are: {dct["role"]}.\n'
     out.append(prm_rl)
 
     # Add in corresponding sections of the email using helper functions from
