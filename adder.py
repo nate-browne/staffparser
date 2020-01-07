@@ -10,6 +10,9 @@ from typing import Dict, List
 MessageString = List[str]
 ParsedRowDict = Dict[str, str]
 
+attnd = "You are attending lecture for a course (either for CSE 95 or because \
+you are a new Gary tutor.)\n"
+
 
 def add_attendance(dct: ParsedRowDict, out: MessageString) -> None:
     '''Adds the course attendance portion of the email to the MessageString.
@@ -21,13 +24,11 @@ def add_attendance(dct: ParsedRowDict, out: MessageString) -> None:
     Returns:
         None. Out is updated as an output parameter to the function.
     '''
+
+    # as it turns out, doing any fancier parsing is pointless
+    # since Gary changes this section of the spreadsheet FAR too often.
     if dct['attending'] != '':
-        course = dct['attending'].split(' ')
-        out.append(f"You are attending lecture for {course[0]}.\n")
-        if len(course) > 1:
-            for ind, val in enumerate(course):
-                if ind != 0:
-                    out.append(f'You are also attending lecture for {val}.\n')
+        out.append(attnd)
 
 
 def add_hours_portion(dct: ParsedRowDict, out: MessageString) -> None:
