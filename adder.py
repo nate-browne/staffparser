@@ -43,10 +43,9 @@ def add_hours_portion(dct: ParsedRowDict, out: MessageString) -> None:
     '''
     if dct['total_hours'] != '':
         hrs = f'You are holding {dct["total_hours"]} open lab hours per week.'
-        if 'location' in dct:
-            loc = dct['location']
-        else:
-            loc = 'B250'
+
+        loc = dct['location'] if 'location' in dct else 'B250'
+
         lb = f'\nYou will hold your open lab hours in {loc}.\n\n'
         out.append(hrs + "\n\n")
         if dct['12_hours'] != '':
