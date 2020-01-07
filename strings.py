@@ -3,8 +3,8 @@ bp = "Dear{nm},\n\nThe following items are in addition to any CSE 15L/CSE 110\
  am getting the following information from my understanding of the information\
  you provided by completing the {qrtr} preferences form. That was a lot of\
  information to process for many people; it is possible that I made a mistake.\
- \n\nCan you please confirm or correct the following by sending me an email to\
- let me know?\n\nThanks,\n\nGary\n\n"
+ \n\nCan you please confirm or correct the following by sending me (Gary) an \
+email to let me know?\n\nThanks,\n\nGary\n\n"
 file_err_str = "\n\tERROR: cannot find file \"{}\". Verify that it is in the\
  current directory."
 email_err_str = '\n\tERROR: email address "{}" not well formatted.'

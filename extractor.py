@@ -43,3 +43,17 @@ def extract_data(row: CSVRow, data: ParsedRowDict) -> None:
     data['12_events'] = row[34]
     data['15l_events'] = row[35]
     # data['110_events'] = row[34]
+
+
+def extract_emails(row: CSVRow, mails: List[str]) -> None:
+    '''Pulls out the email addresses of the tutors.
+
+    Args:
+        row: First parameter. Current row of the CSV/TSV file being parsed.
+        mails: Second parameter. Populated with the email address of the
+        current row.
+
+    Returns:
+        None. mails is updated as an output parameter.
+    '''
+    mails.append(row[7])

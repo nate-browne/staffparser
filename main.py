@@ -7,11 +7,11 @@ import pprint  # for debugging
 
 from sys import argv, exit
 from os.path import isfile
-from mailer import send_mail
 from strings import file_err_str
 from verifier import verify_email
-from extractor import extract_data
 from creator import create_course_string
+from mailer import send_mail, send_to_all
+from extractor import extract_data, extract_emails
 
 
 def main(debug: bool = False) -> None:
@@ -60,10 +60,12 @@ def main(debug: bool = False) -> None:
 
         # Populate the mails array with one email string per tutor
         mails = []
+        emails = []
         printed = False
         for row in reader:
             data = dict()
             extract_data(row, data)
+            extract_emails(row, emails)
 
             # Print the first entry
             if debug and not printed:
@@ -94,14 +96,18 @@ def main(debug: bool = False) -> None:
             if receiver.upper() == 'Y':
                 send_mail(result)
             else:
-                print()
-                print("Enter an email address to send the email to.")
-                dest = input("Email address must be well formatted: ")
+                receiver = input("Send to each tutor? (y/n): ")
+                if receiver.upper() == 'Y':
+                    send_to_all(mails, emails)
+                else:
+                    print()
+                    print("Enter an email address to send the email to.")
+                    dest = input("Email address must be well formatted: ")
 
-                # Make sure the user gave us a valid email address
-                verify_email(dest)
+                    # Make sure the user gave us a valid email address
+                    verify_email(dest)
 
-                send_mail(result, dest)
+                    send_mail(result, dest)
         else:
             print("Writing to file \"emails.out\"...")
             with open("emails.out", 'w') as outfile:
